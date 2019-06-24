@@ -1,2 +1,2 @@
 # MusicSearch
-Install node_modules by npm install, then you can run the app
+Install node_modules by npm install, then you can run the app.
