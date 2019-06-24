@@ -1,0 +1,41 @@
+/*COLORS*/
+$color-bg: #e6e6e6;
+$color-app: #d6d6d6;
+$color-header: #8a8a8a;
+$color-login: whitesmoke;
+
+$color-shadow: #8f8f8f;
+$color-input-text: #d3d3d3;
+$color-input-text-focus: $color-login;
+$color-input-border: #d3d3d3;
+$color-button: #d3d3d3;
+
+$color-text: #272727;
+$color-msg-error: #8b0000;
+
+$shadow: 0px 0px 1px 1px $color-shadow;
+
+/*FONTS-SIZES-WEIGHTS*/
+$font-size-general: 62.5%;
+$font-family: 'quicksand';
+$font-family-alt: 'roboto';
+
+$font-size-header: 1.6rem;
+$font-weight-header: 100;
+
+$font-size-subheader: 1.2rem;
+$font-weight-subheader: 300;
+
+$font-size-p: .85rem;
+$font-weight-p: 300;
+
+@keyframes popIn {
+    0% {
+      transform: scale(0);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+

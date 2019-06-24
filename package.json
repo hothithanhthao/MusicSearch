@@ -1,0 +1,34 @@
+{
+  "name": "music-search",
+  "version": "1.0.0",
+  "description": "Test application for internship. Includes react, redux, immutable and testing.",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "test": "jest --verbose --watchAll"
+  },
+  "author": "Ziango",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.8.0",
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.20.3"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "axios": "^0.18.1",
+    "immutable": "^4.0.0-rc.12",
+    "lodash": "^4.17.11",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-immutable": "^4.0.0",
+    "regenerator-runtime": "^0.13.2",
+    "uuid": "^3.3.2"
+  }
+}

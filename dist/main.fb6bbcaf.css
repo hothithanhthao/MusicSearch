@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap");
+/*COLORS*/
+/*FONTS-SIZES-WEIGHTS*/
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #272727;
+}
+
+*:active, *:hover, *:focus {
+  outline: none;
+}
+
+body {
+  font-size: 62.5%;
+  background-color: #e6e6e6;
+  padding: 1.5rem;
+  background-color: lightgray;
+}
+
+a {
+  text-decoration: none;
+  color: #272727;
+}
+
+input {
+  max-width: 70%;
+  margin-top: -0.3rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #d3d3d3;
+  padding: 0.2rem;
+  border-bottom: 2px solid #d3d3d3;
+  font-family: "quicksand";
+  font-size: 0.85rem;
+  font-weight: 100;
+  transition: all 0.3s ease-out;
+}
+input:focus {
+  background-color: whitesmoke;
+  border-bottom: 2px solid #d3d3d3;
+}
+
+button {
+  align-self: flex-end;
+  min-width: 15%;
+  margin-top: 0.65rem;
+  background-color: #d3d3d3;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  font-family: "quicksand";
+  font-size: 0.85rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+button:hover {
+  background-color: whitesmoke;
+}
+
+.app {
+  width: calc(100vw - 3rem);
+  min-height: calc(100vh - 3rem);
+  background-color: #d6d6d6;
+  box-shadow: 0px 0px 1px 1px #8f8f8f;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.6)), url("/bg.c04a5f46.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  width: 100%;
+  min-height: 5vh;
+  background: linear-gradient(to bottom, rgba(138, 138, 138, 0.2), rgba(138, 138, 138, 0));
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.header h1 {
+  font-family: "quicksand";
+  font-size: 1.6rem;
+  font-weight: 100;
+  color: #272727;
+  padding: 0.5rem 1rem;
+}
+.header p {
+  font-family: "quicksand";
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: #272727;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+.header-credentials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0.5rem;
+}
+.header-credentials-logout {
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.header-credentials-logout:hover {
+  font-weight: 700;
+}
+.header-credentials #header-credentials-username {
+  font-weight: bold;
+  color: #272727;
+}
+
+.login {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-component {
+  margin-top: 20vh;
+  background: linear-gradient(to bottom, rgba(245, 245, 245, 0.9), rgba(245, 245, 245, 0.7));
+  padding: 2rem;
+  border-radius: 0.125rem;
+  box-shadow: 0px 0px 1px 1px #8f8f8f;
+}
+.login-component-instruction {
+  font-family: "quicksand";
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+.login-component-controls {
+  display: flex;
+  flex-direction: column;
+}
+.login-component-controls-control {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 0.5rem;
+}
+.login-component-controls-control-description {
+  width: 30%;
+  font-family: "quicksand";
+  font-size: 0.85rem;
+  font-weight: 300;
+  margin-bottom: 0.2rem;
+  margin-right: 0.5rem;
+}
+.login-component-controls-control input[type=text], .login-component-controls-control input[type=password] {
+  width: 70%;
+  font-family: "roboto";
+}
+.login-component-controls-description-error {
+  color: #8b0000;
+  text-align: center;
+  padding: 0.3rem 0;
+  font-family: "quicksand";
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.mainWindow {
+  min-height: calc(100vh - 3rem - 5vh);
+}
+.mainWindow .lookup {
+  height: 8%;
+  width: 100%;
+  margin-left: 3rem;
+  margin-top: 1rem;
+  font-family: "quicksand";
+  font-size: 1.2rem;
+  font-weight: 300;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.mainWindow .lookup-description {
+  width: 100%;
+  margin-top: 0.8rem;
+  margin-right: 0.75rem;
+}
+.mainWindow .lookup-bar {
+  width: 60%;
+  margin-top: 0.8rem;
+  padding-left: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.mainWindow .lookup-button {
+  margin-left: 0.75rem;
+  width: 15%;
+}
+.mainWindow .results {
+  min-height: 92%;
+  padding: 0 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.mainWindow .results-message {
+  font-family: "quicksand";
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: italic;
+  margin: 2rem 0 0 1rem;
+}
+.mainWindow .results .musician {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1.5rem 1rem 0.5rem 1rem;
+  padding: 0.5rem 1rem 1rem 1rem;
+  background: linear-gradient(to bottom, rgba(230, 230, 230, 0.65), rgba(230, 230, 230, 0.2));
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  animation: popIn 300ms 150ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+  transform: scale(0);
+  transition: all 0.3s ease-out;
+}
+.mainWindow .results .musician-link {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainWindow .results .musician-link-title {
+  font-family: "roboto";
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+.mainWindow .results .musician-link-info-listeners {
+  font-family: "roboto";
+  font-size: 0.85rem;
+  font-weight: 300;
+  font-style: italic;
+  margin-top: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+.mainWindow .results .musician-link img {
+  border-radius: 1rem;
+}
+.mainWindow .results .musician:hover {
+  background: linear-gradient(to bottom, rgba(72, 64, 85, 0.45), rgba(239, 169, 248, 0.18));
+}
+.mainWindow .results .musician:hover .musician-link-title span,
+.mainWindow .results .musician:hover .musician-link-info-listeners,
+.mainWindow .results .musician:hover .musician-link-info-listeners span {
+  color: white;
+}
+.mainWindow .results .musician-remove {
+  margin-top: 1.2rem;
+  width: 7.5vw;
+  align-self: center !important;
+}
+
+@media only screen and (min-width: 1000px) {
+  div.musiciancard {
+    background-color: #fff6b5;
+  }
+}
+.musiciancard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  transition: 0.3s;
+  width: 50%;
+  padding: 10px 10px;
+  margin: auto;
+  font-size: 14px;
+}
+
+.musiciancard:hover {
+  background-image: linear-gradient(45deg, #ffec61, #f321d7);
+  font-family: "Montserrat";
+  font-size: 14px;
+}
+
+.musiciancard-content {
+  padding: 2px 16px;
+  margin: auto;
+}
+
+.musiciancard-tag {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: burlywood;
+  transition: 0.3s;
+  margin-right: 3px;
+  width: 40%;
+}
+
+.musiciancard-artist {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: burlywood;
+  transition: 0.3s;
+  margin-right: 10px;
+  width: 40%;
+}
+
+.musiciancard-artist:hover {
+  background-color: black;
+  color: white;
+}
+
+.musiciancard-content-bio {
+  word-break: break-all;
+}
+
+h4 {
+  padding: 10px;
+}
+
+.musiciancard-tag-content {
+  padding: 10px;
+}
+
+/*# sourceMappingURL=/main.fb6bbcaf.css.map */
